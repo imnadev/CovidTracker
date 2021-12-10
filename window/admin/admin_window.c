@@ -15,7 +15,7 @@ void admin_window_get_records() {
     if (m_records.size > 0) {
         for (int i = 0; i < m_records.size; i++) {
             Record record = g_array_index(m_records.records, Record, i);
-            g_string_append_printf(message, "%-10d%-30s%-30s%-30s%-30s\n",
+            g_string_append_printf(message, "%-20d%-60s%-60s%-60s%-60s\n",
                                    m_records.original[i], record.name, record.surname, record.phone, record.info);
         }
     } else {

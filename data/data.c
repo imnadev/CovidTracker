@@ -27,8 +27,8 @@ Filtered data_get(const char *type) {
         Record record = g_array_index(records, Record, i);
         if (strncmp(record.type, type, sizeof(record.type)) == 0) {
             g_array_append_val(filtered.records, record);
-            filtered.size++;
             filtered.original[filtered.size] = i;
+            filtered.size++;
         }
     }
     return filtered;

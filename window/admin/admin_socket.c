@@ -46,8 +46,8 @@ void *listen_to_connections(void *a) {
 
             if (FD_ISSET(sd, &readfds)) {
                 read(sd, buffer, 1024);
-                char *message = strtok(buffer, DELIMITER);
-                if (strncmp(message, INSERT, sizeof(INSERT)) == 0) {
+                if (strncmp(buffer, INSERT, sizeof(INSERT) - 1) == 0) {
+                    char *message = strtok(buffer, DELIMITER);
 
                     Record record;
 
@@ -78,7 +78,6 @@ void *listen_to_connections(void *a) {
         }
     }
 }
-
 
 void admin_socket_init() {
     for (i = 0; i < max_clients; i++) {
