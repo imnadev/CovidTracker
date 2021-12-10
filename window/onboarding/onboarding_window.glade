@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.10"/>
+  <object class="GtkMessageDialog" id="admin_dialog">
+    <property name="can-focus">False</property>
+    <property name="type-hint">dialog</property>
+    <property name="buttons">ok</property>
+    <property name="text" translatable="yes">Invalid password</property>
+    <property name="secondary-text" translatable="yes">Entered password is invalid, please try again.
+</property>
+    <property name="secondary-use-markup">True</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <property name="layout-style">expand</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMessageDialog" id="client_dialog">
+    <property name="can-focus">False</property>
+    <property name="type-hint">dialog</property>
+    <property name="buttons">ok</property>
+    <property name="text" translatable="yes">Socket error</property>
+    <property name="secondary-text" translatable="yes">Error occured connecting to the server, please check the IP and port entered.
+</property>
+    <property name="secondary-use-markup">True</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can-focus">False</property>
+            <property name="homogeneous">True</property>
+            <property name="layout-style">expand</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="onboarding_window">
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">COVID Tracker Onboarding</property>
+    <property name="icon-name">template_app</property>
+    <signal name="destroy" handler="on_window_onboarding_destroyed" swapped="no"/>
+    <child>
+      <!-- n-columns=1 n-rows=6 -->
+      <object class="GtkGrid">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="margin-left">16</property>
+        <property name="margin-right">16</property>
+        <property name="margin-top">16</property>
+        <property name="margin-bottom">16</property>
+        <property name="row-spacing">16</property>
+        <child>
+          <object class="GtkEntry" id="ip_address">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-length">15</property>
+            <property name="text" translatable="yes">127.0.0.1</property>
+            <property name="placeholder-text" translatable="yes">IP address</property>
+            <property name="input-purpose">digits</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="port">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-length">5</property>
+            <property name="text" translatable="yes">8877</property>
+            <property name="placeholder-text" translatable="yes">Port</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton">
+            <property name="label" translatable="yes">CLIENT</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="hexpand">True</property>
+            <signal name="clicked" handler="on_client_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="password">
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="max-length">32</property>
+            <property name="visibility">False</property>
+            <property name="invisible-char">●</property>
+            <property name="text" translatable="yes">12345678</property>
+            <property name="placeholder-text" translatable="yes">Password</property>
+            <property name="input-purpose">password</property>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton">
+            <property name="label" translatable="yes">ADMIN</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="on_admin_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="left-attach">0</property>
+            <property name="top-attach">5</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

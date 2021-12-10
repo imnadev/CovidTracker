@@ -1,0 +1,13 @@
+#ifndef COVIDTRACKER_COMMON_H
+#define COVIDTRACKER_COMMON_H
+
+#define ADMIN_PASSWORD "12345678"
+
+#define TEST_TYPE "TEST"
+#define VACCINE_TYPE "VACCINE"
+#define PATIENT_TYPE "PATIENT"
+
+#define INSERT "INSERT"
+#define DELIMITER "¬"
+
+#endif
