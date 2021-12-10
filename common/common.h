@@ -8,6 +8,6 @@
 #define PATIENT_TYPE "PATIENT"
 
 #define INSERT "INSERT"
-#define DELIMITER "¬"
+#define DELIMITER "¬¬¬"
 
 #endif

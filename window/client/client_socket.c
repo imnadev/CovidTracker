@@ -53,6 +53,15 @@ int client_socket_init(char *ip, int port) {
     return 0;
 }
 
+char* replace_char(char* str, char find, char replace){
+    char *current_pos = strchr(str,find);
+    while (current_pos) {
+        *current_pos = replace;
+        current_pos = strchr(current_pos,find);
+    }
+    return str;
+}
+
 void client_socket_send(const gchar *name, const gchar *surname, const gchar *phone, const gchar *info, gint typeIndex) {
 
     char *type;
@@ -69,7 +78,7 @@ void client_socket_send(const gchar *name, const gchar *surname, const gchar *ph
     }
 
     char message[1024];
-    sprintf(message, "%s¬%s¬%s¬%s¬%s¬%s", INSERT, name, surname, phone, info, type);
+    sprintf(message, "%s¬¬¬%s¬¬¬%s¬¬¬%s¬¬¬%s¬¬¬%s¬¬¬", INSERT, name, surname, phone, info, type);
 
     puts(message);
 

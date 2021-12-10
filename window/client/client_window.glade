@@ -104,7 +104,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="hexpand">True</property>
-            <property name="max-length">13</property>
+            <property name="max-length">14</property>
             <property name="placeholder-text" translatable="yes">Phone number</property>
           </object>
           <packing>
