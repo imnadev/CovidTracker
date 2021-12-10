@@ -31,10 +31,10 @@ int client_socket_init(char *ip, int port) {
         return -1;
     }
 
-    struct timeval tv;
-    tv.tv_sec = 5;
-    tv.tv_usec = 0;
-    setsockopt(admin_socket, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof tv);
+//    struct timeval tv;
+//    tv.tv_sec = 5;
+//    tv.tv_usec = 0;
+//    setsockopt(admin_socket, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof tv);
 
     admin_address.sin_family = AF_INET;
     admin_address.sin_port = htons(port);
