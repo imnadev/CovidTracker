@@ -1,6 +1,6 @@
 > sudo dnf install gtk3-devel
 
-> git clone https://github.com/imnadev/PlayTogether.git
+> git clone https://github.com/imnadev/CovidTracker.git
 
 > cd main
 
